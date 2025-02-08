@@ -14,12 +14,14 @@ I have organized my solutions into folders based on different parts of the cours
 ### Introduction to Programming
 
 - [**Part 4**](https://github.com/MadalenaAndrade/Python-Learning-Exercises/tree/main/Part-4-Introduction-to-Programming) 
-- [**Part 5**](todo.com) 
-- [**Part 6**](todo.com) 
-- [**Part 7**](todo.com) 
+- [**Part 5**](https://github.com/MadalenaAndrade/Python-Learning-Exercises/tree/main/Part-5-Introduction-to-Programming) 
+- [**Part 6**](https://github.com/MadalenaAndrade/Python-Learning-Exercises/tree/main/Part-6-Introduction-to-Programming) 
+- [**Part 7**](https://github.com/MadalenaAndrade/Python-Learning-Exercises/tree/main/Part-7-Introduction-to-Programming) 
 
 ### Advanced Course in Programming
 
 - [**Part 8**](todo.com) 
+- [**Part 9**](todo.com) 
+- [**Part 10**](todo.com) 
 
 For a full description of the exercises, you can check the [official course page](https://programming-24.mooc.fi/).  
