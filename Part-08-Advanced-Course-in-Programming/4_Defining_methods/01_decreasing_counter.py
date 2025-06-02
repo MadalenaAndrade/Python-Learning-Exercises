@@ -2,24 +2,23 @@
 class DecreasingCounter:
     def __init__(self, initial_value: int):
         self.value = initial_value
-        self.old_value = self.value
+        self.old_value = initial_value 
 
     def print_value(self):
         print("value:", self.value)
 
     def decrease(self):
-        if self.value != 0:
+        if self.value > 0:
             self.value -= 1
 
+    # Write the rest of the methods here!
     def set_to_zero(self):
-        self.old_value = self.value
         self.value = 0
-        
+
     def reset_original_value(self):
         self.value = self.old_value
 
-
-if __name__ == "__main__":
+if __name__=="__main__":
     counter = DecreasingCounter(55)
     counter.decrease()
     counter.decrease()
