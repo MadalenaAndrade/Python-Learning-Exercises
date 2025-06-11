@@ -5,7 +5,7 @@ class Person:
         self.height = height
 
     def __str__(self):
-        return self.name
+        return f"{self.name} ({self.height} cm)"
 
 class Room:
     def __init__(self):
@@ -13,40 +13,33 @@ class Room:
     
     def add(self, person: Person):
         self.persons.append(person)
-    
+
     def is_empty(self):
-        return True if self.persons == [] else False
+        return True if not self.persons else False
     
     def print_contents(self):
-        total_height = 0
+        print(f"There are {len(self.persons)} persons in the room, and their combined height is {sum(person.height for person in self.persons)} cm")
         for person in self.persons:
-            total_height += person.height
-        print(f"There are {len(self.persons)} in the room, and their combined height is {total_height} cm")
-        for person in self.persons:
-            print(f"{person.name} ({person.height} cm)")
+            print(person)
 
     def shortest(self):
-        if self.persons == []:
+        if self.is_empty():
             return None
-        else:
-            shortest_person = self.persons[0]
-            for person in self.persons:
-                if person.height <= shortest_person.height:
-                    shortest_person = person
-            return shortest_person
         
+        min_height_person = self.persons[0]
+        for person in self.persons:
+            if person.height < min_height_person.height:
+                min_height_person = person
+        
+        return min_height_person
+    
     def remove_shortest(self):
-        if self.persons == []:
+        if self.is_empty():
             return None
-        else:
-            shortest_person = self.shortest()
-            for person in self.persons:
-                if person == shortest_person:
-                    removed_person = person
-                    self.persons.remove(person)
-            return removed_person
-
-
+        
+        person_index = self.persons.index(self.shortest())
+        removed_person = self.persons.pop(person_index)
+        return removed_person
 
 if __name__=="__main__":
     room = Room()
